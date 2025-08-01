@@ -14,5 +14,5 @@ func main() {
 	msg := make(chan string)
 	go printMessage(msg)
 	fmt.Println("Hello from main")
-	fmt.Println(<-msg)
+	fmt.Println(<-msg) // make the main goroutine wait for the printMessage goroutine
 }
